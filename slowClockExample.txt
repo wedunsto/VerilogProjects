@@ -1,0 +1,21 @@
+`timescale 1ns / 1ps
+module TopLevel(clk,result);
+    input clk;//internal 100MHz clock
+    output reg result;
+    wire slowed;
+    
+    SlowClock U0 (.inClock(clk), .outClock(slowed));
+    
+    always @ (slowed)
+        begin
+            if(slowed == 1)
+                begin
+                    result <= 1'b1;
+                end
+            else
+                begin
+                    result <= 1'b0;
+                end 
+        end
+endmodule
+
