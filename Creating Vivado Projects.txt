@@ -1,0 +1,10 @@
+Creating Vivado Projects
+	Create Project
+	Enter project name and location
+	RTL Project
+	Create Verilog source file(s)
+		Create constraint file(s)
+	Select Boards
+	Basys3
+		Install / Update Boards if not found
+	Finish
